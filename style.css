@@ -6,35 +6,3 @@ a {
     background-color: rgb(35, 160, 0);
   }
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: rgb(0, 0, 173);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: rgb(9, 0, 181);
-  }
-  
-  .active {
-    background-color: #a9000061;
-  }
-  </style>
-  </head>
-
-  
-  <body>
-  
-  <ul>
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a class="active" href="#keplink">Képlink</a></li>
-    <li><a class="active" href="#list"></>Órarend</a><li>
-    <li><a class="active" href="#tablazat">Táblázat</a></li>
-    <li><a class="active" href="#urlap">Ürlap</a></li>
-  </a>
