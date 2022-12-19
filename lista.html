@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista</title>
+  <title>Home</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -11,17 +9,54 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-</head>
-<body bgcolor="white">
-    <style>
-        footer {
-        text-align: center;
-        padding: 3px;
-        background-color: rgb(90, 0, 0);
-        color: rgb(255, 255, 255);
-      }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        ul {
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #37ff00;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  background-color: #000000;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+img{
+  width: 800px; ;
+  height: 800px; ;
+}
+
+ul {
           list-style-type: none;
           margin: 0;
           padding: 0;
@@ -48,16 +83,26 @@
         .active {
           background-color: #04AA6D;
         }
-        </style>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="keplink.html">Kedvenc hobbim</a></li>
-        <li><a class="active" href="lista.html">Lista</a></li>
-        <li><a href="tablazat.html">Órarend</a></li>
-        <li><a href="urlap.html">Pizza Rendelés</a></li>
-        <li><a href="evszakok.html">Évszakok</a></li>
-      </ul>
+</style>
+</head>
+<body style="font-family:Verdana;color:#37ff00;" bgcolor="grey">
 
+<div style="background-color:#000000;padding:15px;text-align:center;">
+  <h1>Lista</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="index.html">HOME</a>
+    <a href="keplink.html">Kedven hobbim</a>
+    <a href="lista.html">Lista</a>
+    <a href="tablazat.html">Órarend</a>
+    <a href="urlap.html">Pizza rendelés</a>
+    <a href="evszakok.html">Évszakok</a>
+    <a href="homoktovis.html">Homoktövis</a>
+  </div>
+
+  <div class="main">
     <h1 style="color:blueviolet;">Széplaki Armand</h1>
 <h2 style="color:green;">Lista</h2>
 <p style="background-color:palevioletred; width: 300px;">A kedvenc tantárgyaim:</p>
@@ -72,9 +117,15 @@
 <li type="disc">Snowboardozás</li>
 <li type="square">Kutyával való foglalkozás</li>
 </ul>
-<footer>
+  </div>
+</div>
+
+<div>
+  <footer>
     <h3><p>Széplaki Armand sulis email címe:<br>
     <a href="mailto: szeplakia@kkszki.hu">szeplakia@kkszki.hu</a></p></h3>
   </footer>
+</div>
+
 </body>
 </html>
