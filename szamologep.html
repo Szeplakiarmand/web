@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <title>Táblázat</title>
+  <title>Számológép</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -52,47 +52,15 @@
   }
 }
 img{
-  width: 800px; ;
-  height: 800px; ;
+  width: 350px; ;
+  height: 500px; ;
 }
-
-table, th, td {
-  border:1px solid rgb(0, 0, 0);
-}
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover:not(.active) {
-      background-color: #111;
-    }
-    
-    .active {
-      background-color: #04AA6D;
-    }
 </style>
 </head>
 <body style="font-family:Verdana;color:#37ff00;" bgcolor="grey">
 
 <div style="background-color:#000000;padding:15px;text-align:center;">
-  <h1>Órarend</h1>
+  <h1>Számológép</h1>
 </div>
 
 <div style="overflow:auto">
@@ -103,87 +71,45 @@ table, th, td {
     <a href="tablazat.html">Órarend</a>
     <a href="urlap.html">Pizza rendelés</a>
     <a href="evszakok.html">Évszakok</a>
+    <a href="szamologep.html">Számológép</a>
     <a href="homoktovis.html">Homoktövis</a>
   </div>
 
   <div class="main">
-    <h2>Órarend</h2>
+    <form action="javascript:void(0)">
+        <fieldset>
+            <legend>Számol</legend>
+            <br>
+            <input type="number" name="" id="a" placeholder="szám1" required>
+            <input type="number" name="" id="b" placeholder="szám2"required>
+            <input type="text" name="" id="c" placeholder="eredmény" readonly>
+            <br><br>
+            <input type="submit" value="+" onclick="ad()">
+            <input type="submit" value="-" onclick="kiv()">
+            <input type="submit" value="*" onclick="szor()">
+            <input type="submit" value="/" onabort="oszt()">
+            <input type="reset" value="törlés">
+        </fieldset>
+    </form>
+    <script>
+        function ad() {
+            c.value = Number(a.value) + Number(b.value)
+        }
+        function kiv() {
+            c.value = Number(a.value) - Number(b.value)
+        }
+        function szor() {
+            c.value = Number(a.value) * Number(b.value)
+        }
+        function oszt() {
+            c.value = Number(a.value) / Number(b.value)
+        }
+    </script>
+  </div>
 
-<table style="width:100%">
-
-<tr>
-<th>Hétfő</th>
-<th>Kedd</th>
-<th>Szerda</th>
-<th>Csütörtök</th>
-<th>Péntek</th>
-
-</tr>
-  <tr>
-   
-    <td>Töri</td>
-    <td>Matek</td>
-    <td>Matek</td>
-    <td>Programmózás 2x</td>
-    <td>Angol</td>
-
-
-  </tr>
-  <tr>
-  
-    <td>Tesi</td>
-    <td>Komp. term</td>
-    <td>Töri</td>
-    <td>Digitális kultúra</td>
-    <td>Magyar</td>
-
-  </tr>
-  <tr>
-    <td>Angol</td>
-    <td>Magyar komp</td>
-    <td>Ósztály fönöki</td>
-    <td>Digitális kultúra</td>
-    <td>Matek</td>
- 
-  <tr>
-  <td>Komp. term</td>
-  <td>Angol</td>
-  <td>Angol</td>
-  <td>Komp. term</td>
-  <td>Töri</td>
-  
-</tr>
-<tr>
- <td>Infómatika és táv</td>
-    <td>Magyar</td>
-    <td>Munkavállalói</td>
-    <td>Tesi</td>
-    <td>Matek komp</td>
-    
-  </tr>
-  <tr>
-  <td>Infómatika és táv</td>
-  <td>Magyar</td>
-  <td>IKT Projectmunka</td>
-  <td>Matek</td>
-  <td>Magyar</td>
-  </tr>
-  <tr>
-  
-  <td>Infómatika és táv</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>tesi</td>
-  
-  </tr>
-  <tr>
-  
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td>Tesi</td>
+  <div class="right">
+    <h2>Rólam egy pár kép</h2>
+    <img src="IMG/kollazs.jpg">
   </div>
 </div>
 
