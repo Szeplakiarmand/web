@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitagorasz</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="pita.css">
+  
+</head>
+
+<body>
+
+<h1>Pitagorasz tétel</h1>
+    <img src="haromszog.png" alt="">
+    <form action="javascript:void(0)">
+        <fieldset style="width: 50%;">
+        <legend><h3>Adj meg legalább két oldalt!</h3></legend>
+    <label id="aLabel"><h2>A oldal:</h2></label><br><input type="text" id="aTextBox" ><br>
+    <label id="bLabel"><h2>B oldal:</h2></label><br><input type="text" id="bTextBox"><br>
+    <button type="button" id="submitButton">submit</button><br> <button type="reset" id="resetButton"> Reset</button>
+    <label id="cLabel"></label><br>
+
+    <script>
+
+document.getElementById("submitButton").onclick = function(){
+
+    a = document.getElementById("aTextBox").value;
+    a = Number(a);
+
+    b = document.getElementById("bTextBox").value;
+    b = Number(b);
+
+    c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+    document.getElementById("cLabel").innerHTML = "Side C: " + c;
+}
+    </script>
+
+</body>
+</html>
