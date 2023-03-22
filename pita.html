@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <title>Számológép</title>
+  <title>Pitagorásztétel</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -10,6 +10,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="pita.css">
 <style>
 * {
   box-sizing: border-box;
@@ -51,16 +52,41 @@
     width: 100%;
   }
 }
-img{
-  width: 350px; ;
-  height: 500px; ;
+
+        
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
 }
 </style>
 </head>
 <body style="font-family:Verdana;color:#37ff00;" bgcolor="grey">
 
 <div style="background-color:#000000;padding:15px;text-align:center;">
-  <h1>Számológép</h1>
+  <h1>Pitagorásztétel</h1>
 </div>
 
 <div style="overflow:auto">
@@ -76,50 +102,31 @@ img{
     <a href="pita.html">Pitagorásztétel</a>
   </div>
 
-  <div class="main">
+  <h1>Pitagorasz tétel</h1>
+    <img src="haromszog.png" alt="">
     <form action="javascript:void(0)">
-        <fieldset>
-            <legend>Számol</legend>
-            <br>
-            <input type="number" name="" id="a" placeholder="szám1" required>
-            <input type="number" name="" id="b" placeholder="szám2"required>
-            <input type="text" name="" id="c" placeholder="eredmény" readonly>
-            <br><br>
-            <input type="submit" value="+" onclick="ad()">
-            <input type="submit" value="-" onclick="kiv()">
-            <input type="submit" value="*" onclick="szor()">
-            <input type="submit" value="/" onabort="oszt()">
-            <input type="reset" value="törlés">
-        </fieldset>
-    </form>
+        <fieldset style="width: 50%;">
+        <legend><h3>Adj meg legalább két oldalt!</h3></legend>
+    <label id="aLabel"><h2>A oldal:</h2></label><br><input type="text" id="aTextBox" ><br>
+    <label id="bLabel"><h2>B oldal:</h2></label><br><input type="text" id="bTextBox"><br>
+    <button type="button" id="submitButton">submit</button><br> <button type="reset" id="resetButton"> Reset</button>
+    <label id="cLabel"></label><br>
+
     <script>
-        function ad() {
-            c.value = Number(a.value) + Number(b.value)
-        }
-        function kiv() {
-            c.value = Number(a.value) - Number(b.value)
-        }
-        function szor() {
-            c.value = Number(a.value) * Number(b.value)
-        }
-        function oszt() {
-            c.value = Number(a.value) / Number(b.value)
-        }
+
+document.getElementById("submitButton").onclick = function(){
+
+    a = document.getElementById("aTextBox").value;
+    a = Number(a);
+
+    b = document.getElementById("bTextBox").value;
+    b = Number(b);
+
+    c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+    document.getElementById("cLabel").innerHTML = "Side C: " + c;
+}
     </script>
-  </div>
-
-  <div class="right">
-    <h2>Rólam egy pár kép</h2>
-    <img src="IMG/kollazs.jpg">
-  </div>
-</div>
-
-<div>
-  <footer>
-    <h3><p>Széplaki Armand sulis email címe:<br>
-    <a href="mailto: szeplakia@kkszki.hu">szeplakia@kkszki.hu</a></p></h3>
-  </footer>
-</div>
 
 </body>
 </html>
